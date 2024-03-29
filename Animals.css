@@ -52,7 +52,7 @@ iframe {
   text-transform: uppercase; 
   letter-spacing: 1px; 
   display: inline-block; 
-  text-align: center; /* 假设你想保留文本居中 */
+  text-align: center; 
 }
 .subscription-container {
   width: 100%;
@@ -216,7 +216,7 @@ body {
   
 
 .social-media-section {
-  text-align: center; /* or align to left/right based on your design */
+  text-align: center; 
 }
 
 .social-media-section h3 {
@@ -224,13 +224,13 @@ body {
 }
 
 .social-media-section a {
-  margin: 0 5px; /* Adjust the space between icons */
-  display: inline-block; /* Align icons in a row */
+  margin: 0 5px; 
+  display: inline-block;
 }
 
 .social-media-section img {
-  width: 24px; /* Adjust icon size as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 24px;
+  height: auto;
 }
 
 
@@ -244,25 +244,25 @@ footer {
   width: 150%;
 }
 .site-footer {
-  background-color: #333; /* Your footer background color */
-  color: #fff; /* Your footer text color */
+  background-color: #333; 
+  color: #fff;
   padding: 20px;
-  font-family: Arial, sans-serif; /* Your desired font */
+  font-family: Arial, sans-serif; 
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1200px; /* Your desired max-width */
+  max-width: 1200px; 
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .footer-column {
-  flex: 1; /* Ensures that columns take up equal space */
-  min-width: 200px; /* Minimum width of a column */
-  padding: 0 10px; /* Spacing between columns */
+  flex: 1; 
+  min-width: 200px; 
+  padding: 0 10px; 
 }
 
 .footer-column h3 {
@@ -274,7 +274,7 @@ footer {
   line-height: 1.6;
   color: #fff;
   text-decoration: none;
-  display: block; /* Makes each link occupy its own line */
+  display: block; 
 }
 
 .footer-social-media {
@@ -300,7 +300,7 @@ footer {
 
 
 
-/* Responsive design adjustments */
+
 @media (max-width: 768px) {
   .footer-container {
       flex-direction: column;

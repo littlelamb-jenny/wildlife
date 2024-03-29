@@ -35,7 +35,7 @@ nav li {
     display: inline-block;
 }
 .hero {
-    position: relative; /* To place hero-text over image*/
+    position: relative; 
     text-align: center;
     padding: 30px;
 }
@@ -44,7 +44,7 @@ nav li {
     width: 100%; 
     height: auto;
     max-height: 350px;
-    opacity: 0.8; /* To make the text stand out more */
+    opacity: 0.8; 
 }
 
 .hero-text {
@@ -52,16 +52,16 @@ nav li {
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%);
-    color: white; /* Assuming a dark background image */
+    color: white; 
 }
 
-.button { /* Styling for buttons */
+.button {
     background-color: #4CAF50; 
     color: white;
     padding: 15px 25px;
     text-decoration: none;
 }
-.center-text { /* Create a class for your centered text */
+.center-text { 
     text-align: center;
 }
 
@@ -69,19 +69,19 @@ nav li {
     text-align: center;
 }
 
-/* Apply the class to the sections you want to center */
+
 .hero,
 .benefits,
 .opportunities,
 .how-to-apply { 
     text-align: center;
 }
-/* Target the form when the URL fragment matches its ID */
+
 .application-form:target { 
-    display: block; /* Show the form */
+    display: block; 
 }
 .application-form {
-    /* Style your form as desired */
+    
 }
 
 .form-group { 
