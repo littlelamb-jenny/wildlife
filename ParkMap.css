@@ -73,4 +73,7 @@
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle drop shadow */
     border-radius: 5px; /* Slightly rounded corners */
 }
+body {
+    font-family: 'Roboto', sans-serif;
+}
 

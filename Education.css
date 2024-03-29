@@ -341,3 +341,6 @@ footer.site-footer {
     margin: 0 auto;
     margin-top: 20px;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+}

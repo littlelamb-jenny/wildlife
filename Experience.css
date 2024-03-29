@@ -39,6 +39,9 @@ body, h1, h2, h3, p, ul {
     float: right;
     padding: 10px;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 .search-container input[type="text"] {
     padding: 6px;
