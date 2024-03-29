@@ -15,11 +15,11 @@
     align-items: center;
     padding: 10px;
     width: 100%;
-    background-color: transparent; /* 初始背景色设置为透明 */
-    position: fixed; /* 固定在顶部 */
-    top: 0; /* 位于页面顶部 */
-    transition: background-color 0.3s; /* 背景色变化过渡效果 */
-    z-index: 100; /* 确保在其他内容之上 */
+    background-color: transparent; 
+    position: fixed; 
+    top: 0; 
+    transition: background-color 0.3s; 
+    z-index: 100; 
 }
 
 
@@ -31,16 +31,16 @@
 }
 
 .search-container {
-    flex: 1; /* This assigns equal space to the logo and search-container */
+    flex: 1; 
     display: flex;
-    justify-content: center; /* This centers the logo and search icon */
+    justify-content: center; 
     align-items: center;
 }
 
 .top-bar ul {
-    flex: 2; /* This gives the navigation links double the space */
+    flex: 2; 
     display: flex;
-    justify-content: center; /* This will center the links */
+    justify-content: center; 
     align-items: center;
     padding: 0;
     margin: 0;
@@ -48,7 +48,7 @@
 }
 
 .top-bar li {
-    padding: 0 15px; /* Adjust the space between the links as needed */
+    padding: 0 15px;
 }
 
 .top-bar a {
@@ -63,10 +63,9 @@
 }
 
 .search-container input[type="text"] {
-    margin-right: 10px; /* 根据需要调整 */
-}
+    margin-right: 10px; 
 
-/* 汉堡菜单样式 */
+
 .hamburger-menu {
     display: inline-block;
     cursor: pointer;
@@ -82,13 +81,13 @@
     transition: all 0.3s ease;
 }
 
-/* 侧边栏样式 */
+
 .sidebar {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1000;
-    top: 0; /* 这里已经将侧边栏置顶 */
+    top: 0; 
     left: 0;
     background-color: #111;
     overflow-x: hidden;
@@ -97,9 +96,9 @@
     
 }
 
-/* 直接根据复选框的状态控制.sidebar的显示，而不是依赖于DOM的结构 */
+
 .toggle-checkbox:checked ~ .sidebar {
-    width: 250px; /* 或其他展开时的宽度 */
+    width: 250px; 
 
 }
 
@@ -122,7 +121,7 @@
     right: 25px;
     font-size: 36px;
     cursor: pointer;
-    color: white; /* 更新颜色为白色 */
+    color: white; 
 }
 
 header {
@@ -133,14 +132,14 @@ header {
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Aligns content to the bottom */
-    min-height: 300px; /* Or any other height you desire */
+    justify-content: flex-end; 
+    min-height: 300px; 
 }
 
 .search-container {
     position: relative;
-    margin-top: 10px; /* Adjust as per your header's height */
-    max-width: 300px; /* Adjust as per your design requirements */
+    margin-top: 10px; 
+    max-width: 300px; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -156,7 +155,7 @@ header {
 }
 
 
-/* Style the placeholder text */
+
 .search-container input::placeholder {
     color: gray;
 }
@@ -179,16 +178,16 @@ header {
 }
 
 .search-container {
-    flex: 1; /* This assigns equal space to the logo and search-container */
+    flex: 1; 
     display: flex;
-    justify-content: center; /* This centers the logo and search icon */
+    justify-content: center;
     align-items: center;
 }
 
 .top-bar ul {
-    flex: 2; /* This gives the navigation links double the space */
+    flex: 2;
     display: flex;
-    justify-content: center; /* This will center the links */
+    justify-content: center; 
     align-items: center;
     padding: 0;
     margin: 0;
@@ -196,7 +195,7 @@ header {
 }
 
 .top-bar li {
-    padding: 0 15px; /* Adjust the space between the links as needed */
+    padding: 0 15px;
 }
 
 .top-bar a {
@@ -226,10 +225,10 @@ header {
 }
 
 .search-container input[type="text"] {
-    margin-right: 10px; /* 根据需要调整 */
+    margin-right: 10px; 
 }
 
-/* 汉堡菜单样式 */
+
 .hamburger-menu {
     display: inline-block;
     cursor: pointer;
@@ -245,7 +244,7 @@ header {
     transition: all 0.3s ease;
 }
 
-/* 侧边栏样式 */
+
 .sidebar {
     height: 100%;
     width: 0;
@@ -258,9 +257,9 @@ header {
     transition: width 0.5s;
     padding-top: 60px;
 }
-/* 直接根据复选框的状态控制.sidebar的显示，而不是依赖于DOM的结构 */
+
 .toggle-checkbox:checked ~ .sidebar {
-    width: 250px; /* 或其他展开时的宽度 */
+    width: 250px; 
 
 }
 
@@ -294,14 +293,14 @@ header {
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Aligns content to the bottom */
-    min-height: 300px; /* Or any other height you desire */
+    justify-content: flex-end; 
+    min-height: 300px; 
 }
 
 .search-container {
     position: relative;
-    margin-top: 10px; /* Adjust as per your header's height */
-    max-width: 300px; /* Adjust as per your design requirements */
+    margin-top: 10px; 
+    max-width: 300px; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -317,41 +316,41 @@ header {
 }
 
 
-/* Style the placeholder text */
+
 .search-container input::placeholder {
     color: gray;
 }
 nav {
-    position: fixed; /* 固定定位 */
-    top: 0; /* 距离视口顶部为0 */
-    left: 0; /* 距离视口左侧为0 */
-    width: 100%; /* 导航栏宽度为100% */
-    background: #fff; /* 设置背景色，防止页面滚动时内容显示在导航栏下面 */
-    z-index: 1000; /* 确保导航栏在页面的最上层 */
-    /* 根据需要添加的样式 */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 可选：添加阴影以提升层次感 */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background: #fff; 
+    z-index: 1000; 
+    
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
   }
   
   ul {
     margin: 0;
     padding: 0;
-    list-style: none; /* 移除默认列表样式 */
-    text-align: center; /* 可选：如果您希望导航链接居中显示 */
+    list-style: none; 
+    text-align: center; 
   }
   
   ul li {
-    display: inline-block; /* 列表项水平排列 */
-    margin-right: 20px; /* 每个列表项之间的距离 */
+    display: inline-block; 
+    margin-right: 20px; 
   }
   
 
 .hero-section {
-    background-image: url('./img/liongrp.jpg'); /* 替换为你的背景图片路径 */
+    background-image: url('./img/liongrp.jpg'); 
     background-size: cover;
     padding: 150px;
     color: white;
     text-align: center;
-    font-family: 'Consolas', 'Courier New', monospace; /* 这里使用等线字体 */
+    font-family: 'Consolas', 'Courier New', monospace; 
     font-size: 30px; 
 }
 
@@ -359,22 +358,22 @@ nav {
     width: 60%;
     margin: 0 auto;
     padding: 50px;
-    font-family: 'Helvetica', sans-serif; /* 使用现代字体 */
-    line-height: 1.6; /* 增加行高提高阅读体验 */
-    color: #333; /* 深色字体提供更好的可读性 */
+    font-family: 'Helvetica', sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
 }
 
 .content p {
-    margin-bottom: 25px; /* 段落之间的间距 */
+    margin-bottom: 25px; 
 }
 
 .content img {
-    width: 60%; /* 图片宽度与容器相同，不超出 */
-    margin-left: 0; /* 无需偏移 */
-    height: auto; /* 自动调整高度以保持图片比例 */
-    object-fit: cover; /* 图片覆盖整个元素区域，但会保持比例 */
-    margin-top: 20px; /* 在图片顶部添加一些空间 */
-    margin-bottom: 20px; /* 在图片底部添加一些空间 */
+    width: 60%; 
+    margin-left: 0; 
+    height: auto; 
+    object-fit: cover; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
 }
 
 
@@ -385,15 +384,15 @@ nav {
     }
 
     .content img {
-        width: 100%; /* 在小屏幕上，让图片适应容器宽度 */
-        margin-left: 0; /* 在小屏幕上不要左偏移 */
+        width: 100%; 
+        margin-left: 0; 
     }
 }
 
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 高宽比 */
+    padding-bottom: 56.25%; 
     padding-top: 25px;
     height: 0;
 }
@@ -407,16 +406,16 @@ nav {
 }
 
 .video-title {
-    font-family: 'Consolas', 'Courier New', monospace; /* 这里使用等线字体 */
-    text-align: center; /* 标题居中 */
-    margin-top: 50px; /* 根据需要调整，为标题添加上边距 */
-    margin-bottom: 20px; /* 在标题和视频之间添加下边距 */
+    font-family: 'Consolas', 'Courier New', monospace; 
+    text-align: center; 
+    margin-top: 50px; 
+    margin-bottom: 20px; 
     font-size: 30px; 
 }
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 高宽比 */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
 }
@@ -432,25 +431,25 @@ footer {
     width: 100%;
 }
 .site-footer {
-    background-color: #333; /* Your footer background color */
-    color: #fff; /* Your footer text color */
+    background-color: #333; 
+    color: #fff; 
     padding: 20px;
-    font-family: Arial, sans-serif; /* Your desired font */
+    font-family: Arial, sans-serif; 
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1200px; /* Your desired max-width */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .footer-column {
-    flex: 1; /* Ensures that columns take up equal space */
-    min-width: 200px; /* Minimum width of a column */
-    padding: 0 10px; /* Spacing between columns */
+    flex: 1; 
+    min-width: 200px; 
+    padding: 0 10px;
 }
 
 .footer-column h3 {
@@ -462,7 +461,7 @@ footer {
     line-height: 1.6;
     color: #fff;
     text-decoration: none;
-    display: block; /* Makes each link occupy its own line */
+    display: block;
 }
 
 .footer-social-media {
@@ -487,7 +486,7 @@ footer {
 }
 
 .social-media-section {
-    text-align: center; /* or align to left/right based on your design */
+    text-align: center; 
   }
   
   .social-media-section h3 {
@@ -495,17 +494,17 @@ footer {
   }
   
   .social-media-section a {
-    margin: 0 5px; /* Adjust the space between icons */
-    display: inline-block; /* Align icons in a row */
+    margin: 0 5px;
+    display: inline-block; 
   }
   
   .social-media-section img {
-    width: 24px; /* Adjust icon size as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 24px;
+    height: auto; 
   }
   
 
-/* Responsive design adjustments */
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
