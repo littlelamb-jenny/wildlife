@@ -8,20 +8,20 @@
 </head>
 <body>
     <script>
-        // 当页面滚动时执行
+        
         window.onscroll = function() {
             changeTopbarBackground();
         };
     
         function changeTopbarBackground() {
-            // 获取顶部导航条元素
+            
             var topbar = document.querySelector('.top-bar');
-            // 检查页面滚动的距离
+            
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                // 如果滚动超过50px，则改变背景色
-                topbar.style.backgroundColor = "#444444"; // 这里设置您之前的背景色
+                
+                topbar.style.backgroundColor = "#444444"; 
             } else {
-                // 否则设置为透明
+                
                 topbar.style.backgroundColor = "transparent";
             }
         }
