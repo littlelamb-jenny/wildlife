@@ -5,6 +5,11 @@
     box-sizing: border-box;
   }
 
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+
   .top-bar {
     display: flex;
     justify-content: space-between; 
@@ -56,10 +61,6 @@
 .search-container form {
     display: flex;
     align-items: center;
-}
-
-.search-container input[type="text"] {
-    margin-right: 10px; /* 根据需要调整 */
 }
 
 /* 汉堡菜单样式 */
@@ -218,13 +219,6 @@ nav {
     animation-delay: 10s;
 }
 
-.static-text-content {
-    flex: 1; /* 占据剩余的空间 */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 /* 添加响应式设计以适应不同屏幕尺寸 */
 @media (max-width: 768px) {
@@ -463,31 +457,6 @@ footer {
     cursor: pointer;
 }
 
-/* Add more styles for your content */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
-    grid-gap: 16px; /* Spacing between grid items */
-    padding: 16px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px; /* Rounded corners for grid items */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Box shadow for each item */
-}
-
-.gallery-item img {
-    width: 100%;
-    display: block; /* Remove any extra space below the image */
-    transition: transform 0.3s ease; /* Smooth transformation upon hover */
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05); /* Slightly enlarge images on hover */
-}
-
 .caption {
     position: absolute;
     bottom: 0;
@@ -714,20 +683,76 @@ hr {
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   }
-  .social-media-section {
-    text-align: center; /* or align to left/right based on your design */
-  }
-  
-  .social-media-section h3 {
-    margin-bottom: 10px;
-  }
-  
-  .social-media-section a {
-    margin: 0 5px; /* Adjust the space between icons */
-    display: inline-block; /* Align icons in a row */
-  }
-  
-  .social-media-section img {
-    width: 24px; /* Adjust icon size as needed */
-    height: 10%; /* Maintain aspect ratio */
-  }
+
+  .slide-caption {
+    position: absolute;
+    top: 50%; /* 置于图片垂直中心 */
+    left: 50%; /* 置于图片水平中心 */
+    transform: translate(-50%, -50%); /* 确保文本框居中对齐 */
+    width: auto; /* 文本宽度由内容决定，也可以设置为固定百分比 */
+    color: white; /* 字体颜色 */
+    font-size: 4em; /* 字体大小，根据需要调整 */
+    text-align: center; /* 文本居中 */
+    background-color: rgba(0, 0, 0, 0); /* 半透明背景色 */
+    padding: 0.5em 1em; /* 文本的上下左右内边距 */
+    border-radius: 10px; /* 轻微圆角边框 */
+    max-width: 80%; /* 最大宽度限制，以确保文本有足够的空间换行 */
+    /* Removed properties to allow text wrapping */
+}
+
+.our-work {
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.our-work h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.our-work p {
+    margin-bottom: 2em;
+}
+
+.work-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.work-item {
+    width: 30%; /* 每个项目占据容器宽度的三分之一 */
+    margin: 0 1%; /* 两边的空隙 */
+    text-align: left;
+}
+
+.work-item h3 {
+    font-size: 1.5em;
+    color: #333; /* 深色的标题 */
+    margin-bottom: 0.5em;
+}
+
+.work-item p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666; /* 浅色的文本 */
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* 圆角边框 */
+    margin-bottom: 1em; /* 图片下的空间 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .work-container {
+        flex-direction: column;
+    }
+
+    .work-item {
+        width: 100%; /* 移动视图下，项目占满整个容器宽度 */
+    }
+}
