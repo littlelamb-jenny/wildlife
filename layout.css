@@ -1,24 +1,57 @@
 /* Basic Reset */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-.top-bar {
+  .top-bar {
     display: flex;
-    justify-content: space-between; /* 保证搜索框和汉堡菜单分别对齐到左右两侧 */
-    align-items: center; /* 垂直居中对齐 */
-    padding: 10px; /* 根据需要调整 */
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: transparent; /* 初始背景色设置为透明 */
+    position: fixed; /* 固定在顶部 */
+    top: 0; /* 位于页面顶部 */
+    transition: background-color 0.3s; /* 背景色变化过渡效果 */
+    z-index: 100; /* 确保在其他内容之上 */
 }
 
+
+.top-bar img {
+    float: left;
+    margin-left: 40px;
+    width: 100px;
+    animation: move 1.6s linear infinite;
+}
+
+.search-container {
+    flex: 1; /* This assigns equal space to the logo and search-container */
+    display: flex;
+    justify-content: center; /* This centers the logo and search icon */
+    align-items: center;
+}
+
+.top-bar ul {
+    flex: 2; /* This gives the navigation links double the space */
+    display: flex;
+    justify-content: center; /* This will center the links */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.top-bar li {
+    padding: 0 15px; /* Adjust the space between the links as needed */
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}
 
 .search-container form {
     display: flex;
@@ -33,6 +66,7 @@ body {
 .hamburger-menu {
     display: inline-block;
     cursor: pointer;
+    margin-right: 30px;
 }
 
 .hamburger-menu .bar {
@@ -49,14 +83,16 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
-    top: 0;
+    z-index: 1000;
+    top: 0; /* 这里已经将侧边栏置顶 */
     left: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: width 0.5s;
     padding-top: 60px;
+    
 }
+
 /* 直接根据复选框的状态控制.sidebar的显示，而不是依赖于DOM的结构 */
 .toggle-checkbox:checked ~ .sidebar {
     width: 250px; /* 或其他展开时的宽度 */
@@ -64,7 +100,7 @@ body {
 }
 
 .sidebar a {
-    padding: 10px 15px;
+    padding: 30px 15px;
     text-decoration: none;
     font-size: 25px;
     color: white;
@@ -82,10 +118,10 @@ body {
     right: 25px;
     font-size: 36px;
     cursor: pointer;
+    color: white; /* 更新颜色为白色 */
 }
 
 header {
-    background-image: url('./img/home page.jpeg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -143,32 +179,7 @@ nav {
     margin-right: 20px; /* 每个列表项之间的距离 */
   }
   
-  ul li a {
-    text-decoration: none; /* 移除链接下划线 */
-    color: #333; /* 设置链接颜色 */
-    padding: 20px; /* 增加链接区域的大小，使得更易点击 */
-  }
-  
-  ul li a:hover {
-    color: #000; /* 鼠标悬停时的链接颜色 */
-  }
-  
-nav ul {
-    list-style: none;
-    background-color: #444;
-    text-align: center;
-    padding: 0.5rem 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-}
+ 
 
 .content-container {
     display: flex;
@@ -293,13 +304,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Add specific styles for your icons if using FontAwesome or another icon library */
-
-.social-icon { 
-    width: 30px;
-    height: 30px;
-    margin: 5px; 
-}
 /* Responsive design adjustments */
 @media (max-width: 768px) {
     .footer-container {
@@ -314,7 +318,416 @@ footer {
         margin-bottom: 20px;
     }
 }
-body {
-    font-family: 'Roboto', sans-serif;
+
+/* Add this at the end of your layout.css file */
+.overlay-background {
+    position: fixed; /* Positioning relative to the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Make sure it's above other content */
+  }
+  
+  .overlay-content {
+    background: white; /* White background for the content */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds some depth to the box */
+    z-index: 1001; /* Above the overlay background */
+  }
+  
+  
+  /* Initially hide the overlay */
+  .overlay-background {
+    display: none;
+  }
+  /* styles.css */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
+.card {
+    background-color: #ECF3F2;
+    border-radius: 16px;
+    margin: 10px;
+    padding: 20px;
+    width: 350px; /* Adjust width as needed */
+    height: 550px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This ensures that the button stays at the bottom */
+}
+
+.centered-image-map {
+    display: block;
+    margin: 0 auto; /* This will center the image */
+    max-width: 100%; /* This will make sure the image does not exceed the card's width */
+    height: 380px; /* This will maintain the image's aspect ratio */
+    width: 380px;
+}
+
+.card h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+}
+
+.h5 {
+    font-size: 18px; /* Size of the font */
+    font-weight: bold; /* Makes the font bold */
+    line-height: 1.5; /* Adjusts the space between lines */
+    margin-bottom: 10px; /* Space below the subheading */
+    color: #333; /* Dark grey color for better readability */
+    font-family: 'Arial', sans-serif; /* Change to the desired font family */
+    letter-spacing: 0.5px; /* Adds spacing between letters */
+    margin-top: 1rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slightly raise the card on hover */
+}
+
+.ticket-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    padding: 15px 20px; /* Larger padding for more internal space */
+    background-color: #f8f8f8; /* A softer shade of gray for the background */
+    margin-bottom: 15px; /* Space between ticket options */
+    border-radius: 5px; /* Slightly rounded corners for each ticket option */
+}
+
+.price {
+    font-weight: 700; /* Make the price bold */
+    font-size: 18px; /* Larger font-size for price */
+    color: #2c3e50; /* A darker color for better readability */
+}
+
+.ticket-type {
+    font-size: 16px;
+    color: #606060; /* Slightly lighter color for contrast */
+}
+
+.buy-ticket {
+    display: block;
+    width: 100%; /* Make the button extend full width of the card */
+    padding: 12px; /* Larger padding for a bigger button */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    background-color: #5cb85c; /* A pleasant shade of green for the button */
+    color: white;
+    font-size: 18px; /* Larger font-size for button text */
+    cursor: pointer;
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.buy-ticket:hover {
+    background-color: #4cae4c; /* Darker shade on hover for the button */
+}
+
+.price {
+    font-weight: bold;
+}
+
+.ticket-type {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.buy-ticket, .map-search {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    margin-top: 20px; /* Add space above the button */
+    cursor: pointer;
+}
+
+/* Add more styles for your content */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+    grid-gap: 16px; /* Spacing between grid items */
+    padding: 16px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for grid items */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Box shadow for each item */
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block; /* Remove any extra space below the image */
+    transition: transform 0.3s ease; /* Smooth transformation upon hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Slightly enlarge images on hover */
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for caption */
+    color: white;
+    padding: 8px; /* Padding inside the caption */
+    text-align: center;
+    font-size: 16px;
+}
+
+.newsletter-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Adjust the width as necessary */
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+    margin-top: 20px;
+}
+
+input[type=email] {
+    padding: 10px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    width: calc(100% - 120px);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffd700; /* Gold color */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.content-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px; /* Adjust to your preference */
+    margin: 20px;
+}
+
+.collapsible {
+    margin: 20px 0;
+}
+
+.collapse-button {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.content {
+    display: none;
+    padding: 10px 0;
+}
+
+#collapse-checkbox:checked ~ .content {
+    display: block;
+}
+
+#collapse-checkbox:checked ~ .collapse-button::before {
+    content: '▲';
+}
+
+.collapse-button::before {
+    content: '▼';
+    padding-right: 5px;
+}
+
+.content img {
+    width: 100%; /* Adjust if necessary */
+    height: auto;
+}
+
+hr {
+    margin: 0; /* Reset default margins to remove space around the <hr> */
+    border: none;
+    height: 1px;
+    background-color: #333; /* Or any color you prefer */
+    width: calc(100% - 40px); /* 100% of the card width minus the padding on both sides */
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto; /* This will center the image */
+    max-width: 100%; /* This will make sure the image does not exceed the card's width */
+    height: auto; /* This will maintain the image's aspect ratio */
+}
+
+.card p {
+    font-size: 16px; /* Increased font size for paragraphs */
+}
+
+/* You can also directly target the image caption if needed */
+.card .image-caption {
+    font-size: 14px; /* Adjust as needed */
+}
+
+.social-media-section {
+    text-align: center; /* or align to left/right based on your design */
+  }
+  
+  .social-media-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .social-media-section a {
+    margin: 0 5px; /* Adjust the space between icons */
+    display: inline-block; /* Align icons in a row */
+  }
+  
+  .social-media-section img {
+    width: 24px; /* Adjust icon size as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+.overlay {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998; /* 确保高于top-bar和footer */
+}
+
+
+.toggle-checkbox:checked ~ #overlay {
+    display: block;
+}
+
+/* Ensure sidebar is above the overlay */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000; /* 确保最高 */
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    padding-top: 60px;
+}
+/* Make content unclickable when overlay is active */
+.toggle-checkbox:checked ~ #main-content {
+    pointer-events: none;
+    opacity: 0.3; /* Optional: reduce opacity to enhance the effect */
+}
+
+/* Make sure sidebar links are clickable */
+.sidebar a {
+    pointer-events: auto;
+}
+
+.top-bar, footer {
+    z-index: 10;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Viewport height */
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none; /* Hide slides by default */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide.active {
+    display: block; /* Show the active slide */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the whole area, you may also use 'contain' based on your requirement */
+  }
+  
+  /* Controls */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .social-media-section {
+    text-align: center; /* or align to left/right based on your design */
+  }
+  
+  .social-media-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .social-media-section a {
+    margin: 0 5px; /* Adjust the space between icons */
+    display: inline-block; /* Align icons in a row */
+  }
+  
+  .social-media-section img {
+    width: 24px; /* Adjust icon size as needed */
+    height: 10%; /* Maintain aspect ratio */
+  }
