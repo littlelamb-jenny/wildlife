@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="WhatsNew.css">
+    <title>African Parks in the News</title>
+</head>
+<body>
+    <script>
+        // 当页面滚动时执行
+        window.onscroll = function() {
+            changeTopbarBackground();
+        };
+    
+        function changeTopbarBackground() {
+            // 获取顶部导航条元素
+            var topbar = document.querySelector('.top-bar');
+            // 检查页面滚动的距离
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                // 如果滚动超过50px，则改变背景色
+                topbar.style.backgroundColor = "#444444"; // 这里设置您之前的背景色
+            } else {
+                // 否则设置为透明
+                topbar.style.backgroundColor = "transparent";
+            }
+        }
+    </script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="layout.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Wildlife Adventure Park</title>
+</head>
+
+<body>
+        
+        <div class="top-bar">
+            <div class="logo">
+                 <img src="img/icon.jpeg.png">
+            </div>
+                
+            <ul>
+                <li><a href="AmuayWildlifePark.html">Home</a></li>
+                <li><a href="BookTicket.html">Ticket</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+                
+            <div class="search-container">
+                <form action="search" method="get">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit">🔍</button>
+                </form>
+            </div>
+            
+            <label for="toggle-sidebar" class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+        </div>
+   
+</header>
+
+<section class="featured-news">
+    <div class="split-container">
+        <figure class="featured-image">
+            <img src="./img/Butterfly.jpg" alt="Aerial view of forest">
+        </figure>
+        <article class="news-item">
+            <header class="news-header">
+                <span class="news-category">PRESS RELEASES</span>
+                <span class="news-date"> | 19 March 2024</span>
+                <h2>Enjojo Foundation joins African Parks Incubation Programme</h2>
+                <p class="news-source">Source: African Parks</p>
+            </header>
+            <p class="news-summary">Conservation non-profit organization Enjojo Foundation has signed a partnership agreement to join the African Parks Incubation Programme.</p>
+        </article>
+    </div>
+</section>
+
+<section class="other-news">
+    <div class="news-container">
+        <article class="news-item">
+            <img src="img/grass.jpg" alt="Bangweulu Wetlands, Zambia">
+            <h3>STATEMENTS | 17 March 2024</h3>
+            <h2>Statement Regarding an Article in Mail on Sunday about Bangweulu Wetlands, Zambia</h2>
+            <p>Source: African Parks</p>
+            <p>African Parks is aware of a media publication suggesting human rights abuses in Bangweulu Wetlands in Zambia. African Parks has a zero-tolerance policy of human...</p>
+        </article>
+
+        <article class="news-item">
+            <img src="./img/currydeer.jpg" alt="The Great Southern Bioblitz: Odzala-Kokoua National Park">
+            <h3>BLOG | 26 February 2024</h3>
+            <h2>The Great Southern Bioblitz: Odzala-Kokoua National Park</h2>
+            <p>Source: Odzala-Kokoua National Park in the Republic of Congo</p>
+            <p>Recognized as one of the most biologically diverse and species-rich areas on the planet, participated...</p>
+        </article>
+
+        <article class="news-item">
+            <img src="./img/forest.jpg" alt="Suivi donné par African Parks aux allégations de violations des droits humains">
+            <h3>STATEMENTS | 02 February 2024</h3>
+            <h2>Addax Antelope Released Now Roaming Free in the Ennedi Natural and Cultural Reserve</h2>
+            <p>Source: African Parks</p>
+            <p>Ten addax antelope, locally extinct in the reserve, have been released into the Ennedi Natural and Cultural Reserve, as part of an ongoing initiative to re-establish a viable population in the region.</p>
+        </article>
+    </div>
+    
+<section class="other-news">
+    <div class="news-container">
+        <article class="news-item">
+            <img src="img/rhi.jpg" alt="Rhino in the wild">
+            <h3>ARTICLE | 22 September 2023</h3>
+            <h2>Saving the Rhino is More Than an Emotional Quest</h2>
+            <p>Source: Mail & Guardian | Donovan Jooste</p>
+            <p>When one thinks of Africa, there are certain iconic animals that spring to mind amid the vast diversity of its wildlife. The tusks and ears...</p>
+        </article>
+
+        <article class="news-item">
+            <img src="./img/plain.jpg" alt="The Great Southern Bioblitz: Odzala-Kokoua National Park">
+            <h3>STATEMENTS | 20 September 2023</h3>
+            <h2>Statement Regarding the Death of Ranger Gnami Kouga Inocent</h2>
+            <p>Source: African Parks</p>
+            <p>It is with deep sadness that we confirm the passing of Ranger Gnami Kouga Inocent in a confrontation that took place with armed individuals in...</p>
+        </article>
+
+        <article class="news-item">
+            <img src="./img/rhinogrp.jpg" alt="Suivi donné par African Parks aux allégations de violations des droits humains">
+            <h3>PRESS RELEASES | 04 September 2023</h3>
+            <h2>2,000 Southern White Rhino to be Released into the Wild Over Next 10 Years</h2>
+            <p>Source: African Parks</p>
+            <p>African Parks has purchased the world’s largest captive rhino breeding operation in a bid to rescue and rewild the rhino to safe and well-managed protected...</p>
+        </article>
+    </div>
+ </section>
+
+ <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Our Address:</h3>
+            <p>100 A, Carabobo,<br>Venezuela.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Visit the Park</h3>
+            <a href="visit.html">Visit the Park</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="WhatsNew.html">What's News</a>
+            <a href="info.html">Hours & Info</a>
+            <a href="map.html">Park Map</a>
+        </div>
+        <div class="footer-column">
+            <h3>Information</h3>
+            <a href="about.html">About the Park</a>
+            <a href="Ourstory.html">Our Story</a>
+            <a href="AboutUs.html">Amuay Wildlife Park</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="social-media-section">
+            <h3>Follow Us</h3>
+            <a href="https://twitter.com/" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
+            <a href="https://facebook.com/" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://youtube.com/" target="_blank"><img src="img/youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+</html>

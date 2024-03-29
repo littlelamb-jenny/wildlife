@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Story</title>
+    <link rel="stylesheet" href="Ourstory.css"> <!-- Link to the external CSS file -->
+</head>
+<script>
+    // 当页面滚动时执行
+    window.onscroll = function() {
+        changeTopbarBackground();
+    };
+
+    function changeTopbarBackground() {
+        // 获取顶部导航条元素
+        var topbar = document.querySelector('.top-bar');
+        // 检查页面滚动的距离
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            // 如果滚动超过50px，则改变背景色
+            topbar.style.backgroundColor = "#444444"; // 这里设置您之前的背景色
+        } else {
+            // 否则设置为透明
+            topbar.style.backgroundColor = "transparent";
+        }
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="layout.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<title>Wildlife Adventure Park</title>
+</head>
+
+<body>
+    
+    <div class="top-bar">
+        <div class="logo">
+             <img src="img/icon.jpeg.png">
+        </div>
+            
+        <ul>
+            <li><a href="AmuayWildlifePark.html">Home</a></li>
+            <li><a href="BookTicket.html">Ticket</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+        </ul>
+            
+        <div class="search-container">
+            <form action="search" method="get">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        
+        <label for="toggle-sidebar" class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </label>
+        </div>
+<body>
+    <body>
+        
+        <div class="top-bar">
+            <div class="logo">
+                 <img src="img/icon.jpeg.png">
+            </div>
+                
+            <ul>
+                <li><a href="AmuayWildlifePark.html">Home</a></li>
+                <li><a href="BookTicket.html">Ticket</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+                
+            <div class="search-container">
+                <form action="search" method="get">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit">🔍</button>
+                </form>
+            </div>
+            
+            <label for="toggle-sidebar" class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+        </div>
+        <div class="slider-container">
+            <div class="slide active">
+            <img src="img/homelion.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+            <img src="path_to_your_image_2.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+            <img src="path_to_your_image_3.jpg" alt="Image 3">
+            </div>
+            
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function moveSlide(n) {
+                showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("slide");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slides[slideIndex-1].style.display = "block";  
+                }    
+            </script>
+            <!-- Controls -->
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    <input type="checkbox" id="toggle-sidebar" class="toggle-checkbox" hidden>
+
+    <nav id="sidebar-menu" class="sidebar">
+        <label for="toggle-sidebar" class="closebtn">&times;</label>
+        <a href="Experience.html">Our Experience</a>
+        <a href="animals.html">Animals</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="BookTicket.html">Book Tickets</a>
+    </nav>
+
+    <main id="main-content">
+
+    <input type="checkbox" id="toggle-sidebar" class="toggle-checkbox" hidden>
+    
+    
+    <!-- Overlay -->
+    <label for="toggle-sidebar" class="overlay" id="overlay"></label>
+    
+<div class="hero-section">
+    <h1>Our Story</h1>
+</div>
+
+<div class="content">
+    <p class="text">
+        African Parks is a non-profit conservation organisation that takes on the complete responsibility for the rehabilitation and long-term management of national parks in partnership with governments and local communities. We currently manage 22 national parks and protected areas in 12 countries covering over 20 million hectares in: Angola, Benin, Central African Republic, Chad, the Democratic Republic of Congo, Malawi, Mozambique, the Republic of Congo, Rwanda, South Sudan Zambia and Zimbabwe.
+    </p>
+    
+    <img src="./img/ourstory.jpg" alt="African Parks supports a number of schools surrounding Zakouma National Park, Chad" class="offset-image"> <!-- 替换为你的图片路径 -->
+    <p class="text">
+    <p class="text">
+            The organisation was founded in 2000 in response to the dramatic decline of protected areas due to poor management and lack of funding. African Parks utilises a clear business approach to conserving Africa’s wildlife and remaining wild areas, securing vast landscapes and carrying out the necessary activities needed to protect the parks and their wildlife. African Parks maintains a strong focus on economic development and poverty alleviation of surrounding communities to ensure that each park is ecologically, socially, and financially sustainable in the long-term.
+    </p>
+    Our goal is to manage 30 parks by 2030, the geographic spread of protected areas and representation of different ecoregions makes this the largest and most ecologically diverse portfolio of parks under management by any one NGO on the continent.
+    </p>
+    <h2 class="video-title">Watch this film to learn more</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/r0GjH8qSUt0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Our Address:</h3>
+            <p>100 A, Carabobo,<br>Venezuela.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Visit the Park</h3>
+            <a href="visit.html">Visit the Park</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="WhatsNew.html">What's News</a>
+            <a href="info.html">Hours & Info</a>
+            <a href="map.html">Park Map</a>
+        </div>
+        <div class="footer-column">
+            <h3>Information</h3>
+            <a href="about.html">About the Park</a>
+            <a href="Ourstory.html">Our Story</a>
+            <a href="AboutUs.html">Amuay Wildlife Park</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="social-media-section">
+            <h3>Follow Us</h3>
+            <a href="https://twitter.com/" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
+            <a href="https://facebook.com/" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://youtube.com/" target="_blank"><img src="img/youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+</html>

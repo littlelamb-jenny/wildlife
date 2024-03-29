@@ -756,3 +756,81 @@ hr {
         width: 100%; /* 移动视图下，项目占满整个容器宽度 */
     }
 }
+/* Base settings for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Style for the overlay containers */
+.overlay-content {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 800px;
+}
+
+/* Common heading style */
+.overlay-content h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Common paragraph style */
+.overlay-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Specific style for the news section */
+.overlay-content:nth-of-type(1) {
+    border-top: 4px solid #007bff;
+}
+
+/* Specific style for the Q&A section */
+.overlay-content:nth-of-type(2) {
+    border-top: 4px solid #28a745;
+}
+
+/* Specific style for the review section */
+.overlay-content:nth-of-type(3) {
+    border-top: 4px solid #ffc107;
+}
+
+/* Enhancements for readability and visual appeal */
+.overlay-content:nth-of-type(3) p {
+    text-indent: 20px;
+}
+
+/* Style adjustments for the first paragraph in each section to differentiate */
+.overlay-content p:first-of-type {
+    font-weight: bold;
+}
+
+/* Style for highlighting keywords or important phrases */
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.other-news .news-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-item {
+    flex-basis: 30%; /* Adjusts the base width of each item */
+    margin: 0 1%; /* Optional: adds a little space between the items */
+}
+
+/* Ensuring the images inside the news items are responsive and fit well */
+.news-item img {
+    width: 100%; /* Makes the image fully responsive, adjusting its width to the parent container */
+    height: auto; /* Maintains the aspect ratio of the image */
+}

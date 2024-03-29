@@ -1,39 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="layout.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Wildlife Adventure Park</title>
 </head>
+
 <body>
-    <header>
+        
         <div class="top-bar">
-            <nav>
-                <ul>
-                    <li><a href="AmuayWildlifePark.html">Home</a></li>
-                    <li><a href="BookTicket.html">Ticket</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                    <li><a href="AboutUs.html">About Us</a></li>
-                </ul>
-            </nav>
+            <div class="logo">
+                 <img src="img/icon.jpeg.png">
+            </div>
+                
+            <ul>
+                <li><a href="AmuayWildlifePark.html">Home</a></li>
+                <li><a href="BookTicket.html">Ticket</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+                
             <div class="search-container">
                 <form action="search" method="get">
                     <input type="text" placeholder="Search..." name="search">
                     <button type="submit">🔍</button>
                 </form>
             </div>
+            
             <label for="toggle-sidebar" class="hamburger-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </label>
         </div>
-        <h1>Amuay Wildlife Adventure Park</h1>
-    </header>
-    
+        <div class="slider-container">
+            <div class="slide active">
+            <img src="img/homelion.jpg" alt="Image 1">
+            <div class="slide-caption">Welcome to Explore the Nature, AmuayWildlifePark </div>
+            </div>
+            <div class="slide">
+            <img src="img/SafariGraff.jpg" alt="Image 2">
+            <div class="slide-caption">Explore the Wild</div>
+            </div>
+            <div class="slide">
+            <img src="img/Family.jpg" alt="Image 3">
+            <div class="slide-caption">Enjoy Your Vacation With Your Family</div>
+            </div>
+            
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function moveSlide(n) {
+                showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("slide");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slides[slideIndex-1].style.display = "block";  
+                }    
+            </script>
+            <!-- Controls -->
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
     <input type="checkbox" id="toggle-sidebar" class="toggle-checkbox" hidden>
+
     <nav id="sidebar-menu" class="sidebar">
         <label for="toggle-sidebar" class="closebtn">&times;</label>
         <a href="Experience.html">Our Experience</a>
@@ -41,21 +87,146 @@
         <a href="volunteer.html">Volunteer</a>
         <a href="BookTicket.html">Book Tickets</a>
     </nav>
-    <main>
-        <div class="content-container">
-            <!-- Image Slider Container -->
-            <div class="image-slider">
-                <div class="slide" style="background-image:url('./img/lionwithppl.jpg');"></div>
-                <div class="slide" style="background-image:url('./img/eleph.jpg');"></div>
-                <div class="slide" style="background-image:url('./img/blackmonkey.jpg');"></div> 
+
+    <main id="main-content">
+
+    <input type="checkbox" id="toggle-sidebar" class="toggle-checkbox" hidden>
+    
+    
+    <!-- Overlay -->
+    <label for="toggle-sidebar" class="overlay" id="overlay"></label>
+        <section class="our-work">
+            <h2>Introduction</h2>
+            <p>Nestled in a lush natural haven, Amuay Wildlife Park offers an unforgettable encounter with wildlife, promoting conservation through exciting educational and interactive experiences. It's a place where adventure meets conservation, allowing visitors to connect with nature and inspiring a commitment to protect our planet's biodiversity.<p>
+            <div class="work-container">
+                <div class="work-item">
+                    <img src="./img/wombat.jpg" alt="Biodiversity Conservation">
+                    <h3>Biodiversity Conservation</h3>
+                    <p>Protecting biodiversity is essential to reduce...</p>
+                </div>
+                <div class="work-item">
+                    <img src="./img/Giraffe.jpg" alt="Community Development">
+                    <h3>Community Development</h3>
+                    <p>To ensure protected areas provide value to communities...</p>
+                </div>
+                <div class="work-item">
+                    <img src="./img/organ.jpg" alt="Park Revenue Generation">
+                    <h3>Park Revenue Generation</h3>
+                    <p>Creating a conservation-led economy that generates...</p>
+                </div>
             </div>
-            <!-- Static Text Content -->
-            <div class="static-text-content">
-                <h1>Join Our Conservation Efforts</h1>
-                <p>Become a guardian of wildlife by volunteering at our African Safari Park. Dedicate your time to the noble cause of animal conservation and habitat preservation. Together, we can make a difference in protecting the future of our planet's most precious inhabitants.</p>
-                <button class="details-button">Volunteer Today</button>
+        </section>
+        
+        <div class="card-container">
+            <div class="card">
+                <h2>Ticket Price</h2>
+                <!-- Ticket options -->
+                <div class="ticket-option">
+                    <span class="price">€15(For Citizen)</span>
+                    <span class="ticket-type">Day Entrance</span>
+                </div>
+                <div class="ticket-option">
+                    <span class="price">€18(For Resident)</span>
+                    <span class="ticket-type">Day Entrance</span>
+                </div>
+                <div class="ticket-option">
+                    <span class="price">€20(For International)</span>
+                    <span class="ticket-type">Day Entrance</span>
+                </div>
+                <div class="ticket-option">
+                    <span class="price">€45(For Citizen)</span>
+                    <span class="ticket-type">Monthly Membership</span>
+                </div>
+                <div class="ticket-option">
+                    <span class="price">€50(For International)</span>
+                    <span class="ticket-type">Monthly Membership</span>
+                </div>
+                <div class="ticket-option">
+                    <span class="price">€350</span>
+                    <span class="ticket-type">Annual Membership</span>
+                </div>
+                <!-- More ticket options... -->
+                <button class="buy-ticket">Purchase Online</button>
+            </div>
+            <div class="card">
+                <h2>Opening Time</h2>
+
+                <img src="img/clock.png" alt="Your Alt Text" class="centered-image">
+                <!-- Operating hours and information -->
+                <div class="h5">All Year：9:30-18:00</div>  
+                <div class="h5" save_image_to_download="true">[Range Rover Experience] 10:30-17:00（Lastest pick up time 17:00）</div>
+                <div class="h5">Park hours, specific opening hours of facilities and routes are subject to on-site announcements in the park.</div>
+                <!-- Contact information -->
+                <hr>
+
+                <div class="h5">Hot Line</div>
+                <div class="h5">400-883-0083</div>
+            </div>
+            <div class="card">
+                <h2>Road Map</h2>
+                <!-- Map image and search bar -->
+                <img src="img/map.jpeg.jpg" alt="map" class="centered-image-map">
+                <button onclick="location.href='ParkMap.html'" class="map-search">Brouse Full Map</button>
             </div>
         </div>
+
+        <div class="overlay-content">
+            <h2>Latest News</h2>
+            <p>VIP passengers: the five black rhinos flown 2,700 miles on a mission to repopulate Chad</p>
+        </div>
+        
+        <div class="overlay-content">
+            <h2>Q&A for Amuay Wildlife Park</h2>
+            <p>Q: What types of animals can I expect to see at Amuay Wildlife Park? </p>
+                <p>A: Amuay Wildlife Park is home to a diverse array of animals, including exotic birds, majestic big cats, various primates, and unique reptiles. Each enclosure is designed to mimic the natural habitats of its inhabitants, offering visitors a glimpse into the beauty of the wild.
+                </p> 
+               
+        </div>
+
+        <div class="overlay-content">
+            <h2>Review of Amuay Wildlife Park</h2>
+           <p>Nestled in a verdant oasis of biodiversity, Amuay Wildlife Park offers an immersive encounter with nature's splendor. From the moment of entry, visitors are greeted by the melodious symphony of exotic birds, a precursor to the park's rich tapestry of wildlife. The park is immaculately maintained, with sprawling enclosures that mimic the natural habitats of its inhabitants, ensuring their comfort and well-being.
+
+           </p>One of the highlights of my visit was the guided safari tour, a thrilling adventure that brought me up close with some of the most majestic creatures I have ever seen. The knowledgeable guides, passionate about conservation, provided fascinating insights into the lives of the animals and the park's efforts to protect endangered species.</p>       </div>
+        
+        <div class="newsletter-container">
+            <h2>Get our newsletter</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore.</p>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email address">
+                <button onclick="subscribe()">Subscribe</button>
+            </div>
+        </div>
+        
+        <section class="other-news">
+            <div class="news-container">
+                <article class="news-item">
+                    <img src="img/rhi.jpg" alt="Rhino in the wild">
+                    <h3> News | 22 January 2024</h3>
+                    <h2>Saving the Rhino is More Than an Emotional Quest</h2>
+                    <p>Source: Mail & Guardian | Donovan Jooste</p>
+                    <p>When one thinks of Africa, there are certain iconic animals that spring to mind amid the vast diversity of its wildlife. The tusks and ears...</p>
+                </article>
+        
+                <article class="news-item">
+                    <img src="./img/plain.jpg" alt="The Great Southern Bioblitz: Odzala-Kokoua National Park">
+                    <h3> News | 09 February 2024</h3>
+                    <h2>Statement Regarding the Death of Ranger Gnami Kouga Inocent</h2>
+                    <p>Source: African Parks</p>
+                    <p>It is with deep sadness that we confirm the passing of Ranger Gnami Kouga Inocent in a confrontation that took place with armed individuals in...</p>
+                </article>
+        
+                <article class="news-item">
+                    <img src="./img/rhinogrp.jpg" alt="Suivi donné par African Parks aux allégations de violations des droits humains">
+                    <h3> News | 04 September 2023 </h3>
+                    <h2>2,000 Southern White Rhino to be Released into the Wild Over Next 10 Years</h2>
+                    <p>Source: African Parks</p>
+                    <p>African Parks has purchased the world’s largest captive rhino breeding operation in a bid to rescue and rewild the rhino to safe and well-managed protected...</p>
+                </article>
+            </div>
+         </section>
+        
+
     </main>
 
     <footer class="site-footer">
@@ -71,7 +242,6 @@
                 <a href="events.html">Events & Education</a>
                 <a href="info.html">Hours & Info</a>
                 <a href="map.html">Park Map</a>
-
             </div>
             <div class="footer-column">
                 <h3>Information</h3>
@@ -79,15 +249,39 @@
                 <a href="careers.html">Join Our Team</a>
                 <a href="tanganyika.html">Tanganyika Wildlife Park</a>
                 <a href="privacy.html">Privacy Policy</a>
-                <img src="img\noun-facebook-63243.svg" alt="Facebook Icon" class="social-icon">
-                <img src="img\noun-instagram-6204292.svg" alt="Facebook Icon" class="social-icon">
-                <img src="img\noun-twitter-5136821.svg" alt="Facebook Icon" class="social-icon">
-                <img src="img\noun-whatsapp-6592278.svg" alt="Facebook Icon" class="social-icon">
+            </div>
+            <div class="social-media-section">
+                <h3>Follow Us</h3>
+                <a href="https://twitter.com/" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
+                <a href="https://facebook.com/" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="https://youtube.com/" target="_blank"><img src="img/youtube.png" alt="YouTube"></a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>© 2024 All Rights Reserved</p>
         </div>
+            
     </footer>
+    <script>
+        // 当页面滚动时执行
+        window.onscroll = function() {
+            changeTopbarBackground();
+        };
+    
+        function changeTopbarBackground() {
+            // 获取顶部导航条元素
+            var topbar = document.querySelector('.top-bar');
+            // 检查页面滚动的距离
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                // 如果滚动超过50px，则改变背景色
+                topbar.style.backgroundColor = "#444444"; // 这里设置您之前的背景色
+            } else {
+                // 否则设置为透明
+                topbar.style.backgroundColor = "transparent";
+            }
+        }
+    </script>
+    
 </body>
 </html>

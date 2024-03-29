@@ -1,47 +1,67 @@
+<script>
+    // 当页面滚动时执行
+    window.onscroll = function() {
+        changeTopbarBackground();
+    };
+
+    function changeTopbarBackground() {
+        // 获取顶部导航条元素
+        var topbar = document.querySelector('.top-bar');
+        // 检查页面滚动的距离
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            // 如果滚动超过50px，则改变背景色
+            topbar.style.backgroundColor = "#444444"; // 这里设置您之前的背景色
+        } else {
+            // 否则设置为透明
+            topbar.style.backgroundColor = "transparent";
+        }
+    }
+</script>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-    <title>Amuay Wildlife Sanctuary - About Us</title>
-    <link rel="stylesheet" type="text/css" href="Education.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="layout.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<title>Wildlife Adventure Park</title>
 </head>
+
 <body>
-    <header>
-
-        <div class="top-bar">
-            <nav>
-                <ul>
-                    <li><a href="AmuayWildlifePark.html">Home</a></li>
-                    <li><a href="BookTicket.html">Ticket</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                    <li><a href="AboutUs.html">About Us</a></li>
-                </ul>
-            </nav>
-            <div class="search-container">
-                <form action="/search" method="get">
-                    <input type="text" placeholder="Search..." name="search">
-                    <button type="submit">🔍</button>
-                </form>
-            </div>
-
-            <label for="toggle-sidebar" class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </label>
+    
+    <div class="top-bar">
+        <div class="logo">
+             <img src="img/icon.jpeg.png">
         </div>
-    </header>
-    <div class="image-container">
+            
+        <ul>
+            <li><a href="AmuayWildlifePark.html">Home</a></li>
+            <li><a href="BookTicket.html">Ticket</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+        </ul>
+            
+        <div class="search-container">
+            <form action="search" method="get">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        
+        <label for="toggle-sidebar" class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </label>
+        </div>
 
-        <img src="./img/education2.jpg" alt="Amuay Wildlife Park" class="responsive-image" id="donate2-image">
-    </div>
     <main>
         <div class="contact-info">
             <h2 style="color: beige; text-align: center;">EDUCATIONAL TOURS</h2>
             <hr> <!-- Line -->
 
-            <p style="color: white; text-align: justify;">Welcome to the Amuay Wildlife Park Education Center! We're thrilled you're interested in embarking on a journey of discovery with us. Amuay Wildlife Park isn't just a place to see animals it's a living classroom with opportunities to learn about the wonders of the natural world.</p>
+            <p style="color: rgb(62, 31, 31); text-align: justify;">Welcome to the Amuay Wildlife Park Education Center! We're thrilled you're interested in embarking on a journey of discovery with us. Amuay Wildlife Park isn't just a place to see animals it's a living classroom with opportunities to learn about the wonders of the natural world.</p>
             <ul>
                 <li><h2 style="color: beige; text-align: center;">Our mission at Amuay Wildlife Park is all about Biodiversity and Conservation, and our Education Department provides unique opportunities to share this with the schools and groups.</h2></li>
             </ul>
@@ -90,7 +110,6 @@
             </div>
         </div>
     </main>
-    <img src="./img/education.jpg" alt="Amuay Wildlife Park" class="responsive-image">
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -126,4 +145,3 @@
     </footer>
 </body>
 </html>
-
