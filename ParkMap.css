@@ -45,3 +45,17 @@
 .info-center {
     background-color: blue;
 }
+.getting-around {
+    margin-bottom: 30px;
+    background-color: #addf84; /* Light background color */
+    padding: 20px;
+  }
+  
+  .getting-around h2 {
+    margin-bottom: 10px; /* Spacing after heading */
+    font-size: 1.2em; /* Increase heading font size */
+  }
+  
+  .getting-around p {
+    line-height: 1.5; /* Adjust line spacing for readability */
+  }
