@@ -84,3 +84,24 @@ nav ul li {
 body {
   font-family: 'Roboto', sans-serif;
 }
+.entry-fees {
+  /* Container styles */
+}
+
+.fee-row {
+  display: flex; /* Or use grid */
+  margin-bottom: 10px; 
+}
+
+.fee-type {
+  flex: 1; /* Adjust column widths as needed */
+  font-weight: bold; 
+}
+
+.fee {
+  flex: 1; /* Adjust column widths */
+  text-align: center; /* Or right */
+}
+.info-column{
+  text-align: left;
+}
